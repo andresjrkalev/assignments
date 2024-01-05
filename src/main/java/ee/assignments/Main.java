@@ -2,6 +2,8 @@ package ee.assignments;
 
 import ee.assignments.linkedlist.DoublyLinkedList;
 import ee.assignments.mergesort.ArraySort;
+import ee.assignments.observer.ConcreteObserver;
+import ee.assignments.observer.Subject;
 
 import java.util.Arrays;
 
@@ -10,6 +12,8 @@ public class Main {
         assignment1();
         System.out.println();
         assignment2();
+        System.out.println();
+        assignment3();
     }
 
     private static void assignment1() {
@@ -30,5 +34,18 @@ public class Main {
         int[] sortedArray = arraySort.mergeSort(array);
         String result = Arrays.toString(sortedArray);
         System.out.println(result);
+    }
+
+    private static void assignment3() {
+        System.out.println("Assignment 3");
+        ConcreteObserver concreteObserver = new ConcreteObserver();
+        ConcreteObserver observer = new ConcreteObserver();
+        ConcreteObserver concrete = new ConcreteObserver();
+        Subject subject = new Subject();
+        subject.add(concreteObserver);
+        subject.add(observer);
+        subject.add(concrete);
+        subject.remove(observer);
+        subject.notifyObservers("Hello world!");
     }
 }
