@@ -1,3 +1,5 @@
+// Reference: https://www.baeldung.com/gradle-run-java-main#run-with-application
+
 plugins {
     id "application"
     id 'java'
