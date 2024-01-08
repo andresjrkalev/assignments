@@ -2,18 +2,16 @@
 
 ## 1. Data Structures Test: Linked List
 
-**Start solution**
+## 2. Algorithms & Problem-solving Test: Sorting
+
+## 3. Design Patterns Test: Observer Pattern
+
+## 4. Spring Test: REST API
+
+## Start solutions
 
 Open command line and execute:
 
 ```
-./gradlew run
+./gradlew bootRun
 ```
-
-## 2. Algorithms & Problem-solving Test: Sorting
-
-Start solution is same as 1. assignment
-
-## 3. Design Patterns Test: Observer Pattern
-
-Start solution is same as 1. and 2. assignments

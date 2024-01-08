@@ -1,0 +1,13 @@
+# Reference: https://stackoverflow.com/a/42811503
+server:
+  servlet:
+    context-path: /api
+# Reference: https://medium.com/@humbleCoder007/configuring-h2-database-in-a-spring-boot-application-3c5b1ec49189
+spring:
+  datasource:
+    url: jdbc:h2:mem:products
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: admin
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect

@@ -3,6 +3,9 @@
 plugins {
     id "application"
     id 'java'
+    // Reference: https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/#getting-started
+    id 'org.springframework.boot' version '3.2.1'
+    id 'io.spring.dependency-management' version '1.1.4'
 }
 
 group = 'ee.assignments'
@@ -18,4 +21,17 @@ ext {
 
 application {
     mainClassName = javaMainClass
+}
+
+dependencies {
+    // Reference: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // Reference: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    // Reference: https://stackoverflow.com/a/54230755
+    runtimeOnly 'com.h2database:h2'
+    // Reference: https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok'
+    // Reference:https://projectlombok.org/setup/gradle
+    annotationProcessor 'org.projectlombok:lombok'
 }

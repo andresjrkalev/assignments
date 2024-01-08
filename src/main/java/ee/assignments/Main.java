@@ -4,9 +4,12 @@ import ee.assignments.linkedlist.DoublyLinkedList;
 import ee.assignments.mergesort.ArraySort;
 import ee.assignments.observer.ConcreteObserver;
 import ee.assignments.observer.Subject;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Arrays;
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
         assignment1();
@@ -14,6 +17,7 @@ public class Main {
         assignment2();
         System.out.println();
         assignment3();
+        SpringApplication.run(Main.class, args);
     }
 
     private static void assignment1() {
